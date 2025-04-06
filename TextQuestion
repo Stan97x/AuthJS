@@ -1,0 +1,53 @@
+1. Comment définiriez-vous l'auhtentification ? (Quels sont ses mécanismes, à quoi sert-elle ?)
+L'authentification est le processus de vérification de l'identité d'un utilisateur. Cela implique souvent l'utilisation de identifiants (nom d'utilisateur et mot de passe), des tokens,etc...
+
+2. Quelles sont les différences avec l'authorisation ?
+Il y en 2:
+Authentification : Vérifie qui est l'utilisateur.
+Autorisation : Détermine quels accès l'utilisateur a après avoir été authentifié.
+
+3. Qu'est-ce qu'un facteur d'authentification ?
+Un facteur d'authentification est un élément utilisé pour prouver l'identité d'un utilisateur. Il peut être basé sur quelque chose que l'utilisateur connaît (mot de passe), possède (token).
+
+4. Citez 3 méthodes d'authentification
+Mot de passe
+Authentification biométrique (empreinte, reconnaissance faciale)
+OTP (code à usage unique)
+
+5. Qu'est-ce que le hashage ?
+Le hashage est un processus qui transforme une donnée (comme un mot de passe) en une valeur fixe et irréversible (hash) pour la sécuriser.
+
+6. À quoi sert le sel dans le hashage ?
+Le sel est une valeur aléatoire ajoutée avant de hacher un mot de passe pour éviter les attaques par tables arc-en-ciel et rendre les hash uniques.
+
+7. Qu'est-ce que le chiffrement ?
+Le chiffrement est un processus qui transforme des données lisibles en données illisibles pour les protéger. Seul le destinataire possédant la clé de déchiffrement peut récupérer les données d'origine.
+
+8. Qu'est-ce que l'attaque par force brute ? Et comment s'en prémunir ?
+Une attaque par force brute consiste à essayer toutes les combinaisons possibles pour deviner un mot de passe. Pour s’en prémunir, on peut utiliser des mots de passe longs, limiter les tentatives ou activer une authentification multifacteur.
+
+9. Quels sont les points d'attentions lors d'un développement d'un système d'authentification ?
+Architecture sécurisée (stockage sécurisé des mots de passe)
+Code propre (validation et gestion des erreurs)
+Dépendances à jour (mises à jour de sécurité)
+
+10. Expliquer le principe d'authentification multifacteur ?
+L'authentification multifacteur nécessite deux ou plus des éléments suivants pour vérifier l'identité : quelque chose que vous connaissez, que vous avez, ou que vous êtes.
+
+11. Qu'est-ce qu'une attaque CSRF ? Comment peut-on s'en protéger ?
+Une attaque CSRF (Cross-Site Request Forgery) consiste à forcer un utilisateur authentifié à effectuer une action non désirée sur un autre site. On peut se protéger avec des tokens anti-CSRF.
+
+12. Expliquez ce que représente pour vous le principe de session, de cookies et de headers.
+Session : Permet de stocker les informations utilisateur sur le serveur.
+Cookies : Stockent des informations sur le côté client (ex. session ID).
+Headers : Contiennent des informations supplémentaires dans les requêtes HTTP (comme les tokens d'authentification).
+
+13. Par quel protocole est sécurisé l'échange d'information entre un client web et un serveur web ?
+Expliquez les grands principes
+Le protocole HTTPS sécurise l'échange d'informations entre un client et un serveur. Il utilise SSL/TLS pour chiffrer les données échangées, garantissant ainsi la confidentialité et l'intégrité.
+
+14. Qu'est-ce qu'un token JWT ? De quoi est-il composé ?
+Un token JWT (JSON Web Token) est une chaîne encodée qui contient des informations sur l'utilisateur. Il est composé de 3 parties : Header, Payload et Signature.
+
+15. Qu'est-ce que l'OAuth 2 ? Qu'est-ce qu'il résoud ? 
+OAuth 2 est un protocole d’autorisation permettant à une application d’accéder à des ressources sur un autre service sans partager les identifiants de l'utilisateur. Il résout le problème de partage sécurisé des informations sans exposer les mots de passe.
